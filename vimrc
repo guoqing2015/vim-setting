@@ -434,59 +434,61 @@ endfunction
 
 
 
-"¹Ø±Õ¼æÈİÄ£Ê½
+"å…³é—­å…¼å®¹æ¨¡å¼
 set nocompatible
 
-"Ä£·Âwindows¿ì½İ¼ü Ctrl+AÈ«Ñ¡¡¢Ctrl+C¸´ÖÆ¡¢Ctrl+VÕ³Ìù
+"æ¨¡ä»¿windowså¿«æ·é”® Ctrl+Aå…¨é€‰ã€Ctrl+Cå¤åˆ¶ã€Ctrl+Vç²˜è´´
 source $VIMRUNTIME/vimrc_example.vim
 source $VIMRUNTIME/mswin.vim
 behave mswin
 
-"gvim×ÖÌåÉèÖÃ
+"gvimå­—ä½“è®¾ç½®
 set guifont=Consolas:h14
 
-"µ±Ç°±à¼­µÄÎÄ¼ş±àÂë
+"å½“å‰ç¼–è¾‘çš„æ–‡ä»¶ç¼–ç 
 set fileencoding=utf-8
- 
-"gvim´ò¿ªÖ§³Ö±àÂëµÄÎÄ¼ş
+
+"gvimæ‰“å¼€æ”¯æŒç¼–ç çš„æ–‡ä»¶
 set fileencodings=ucs-bom,utf-8,gbk,cp936,gb2312,big5,euc-jp,euc-kr,latin1
 "set langmenu=zh_CN
 "let $LANG = 'zh_CN.UTF-8'
 
-"ÉèÖÃÖÕ¶Ë±àÂëÎªgvimÄÚ²¿±àÂëencoding
+"è®¾ç½®ç»ˆç«¯ç¼–ç ä¸ºgvimå†…éƒ¨ç¼–ç encoding
 let &termencoding=&encoding
- 
-"·ÀÖ¹ÌØÊâ·ûºÅÎŞ·¨Õı³£ÏÔÊ¾
+
+"é˜²æ­¢ç‰¹æ®Šç¬¦å·æ— æ³•æ­£å¸¸æ˜¾ç¤º
 set ambiwidth=double
 
-"Ëõ½ø³ß´çÎª4¸ö¿Õ¸ñ
+"ç¼©è¿›å°ºå¯¸ä¸º4ä¸ªç©ºæ ¼
 set sw=4
 
-"tab¿í¶ÈÎª4¸ö×Ö·û
+"tabå®½åº¦ä¸º4ä¸ªå­—ç¬¦
 set ts=4
 
-"ÔÚÊäÈëtabºó, vimÓÃÇ¡µ±µÄ¿Õ¸ñÀ´Ìî³äÕâ¸ötab
-set expandtab 
+"åœ¨è¾“å…¥tabå, vimç”¨æ°å½“çš„ç©ºæ ¼æ¥å¡«å……è¿™ä¸ªtab
+set expandtab
 
-"±à¼­Ê±½«ËùÓĞtabÌæ»»Îª¿Õ¸ñ
+"ç¼–è¾‘æ—¶å°†æ‰€æœ‰tabæ›¿æ¢ä¸ºç©ºæ ¼
 set et
 
-"°´Ò»´Îbackspace¾ÍÉ¾³ı4¸ö¿Õ¸ñ
+"æŒ‰ä¸€æ¬¡backspaceå°±åˆ é™¤4ä¸ªç©ºæ ¼
 set smarttab
- 
-"²»Éú³É±¸·İÎÄ¼ş
+
+"ä¸ç”Ÿæˆå¤‡ä»½æ–‡ä»¶
 set nobackup
 
-" ¹Ø±ÕÁÙÊ±ÎÄ¼ş
+set noundofile
+
+" å…³é—­ä¸´æ—¶æ–‡ä»¶
 " setlocal noswapfile
 set noswapfile
 set noundofile
- 
 
-"¿ªÆôĞĞºÅ±ê¼Ç
+
+"å¼€å¯è¡Œå·æ ‡è®°
 set number
 
-"ÅäÉ«·½°¸
+"é…è‰²æ–¹æ¡ˆ
 let mapleader=','
 let g:molokai_original = 1
 let g:rehash256 = 1
@@ -494,84 +496,84 @@ set t_Co=256
 colorscheme molokai
 " colo molokai
 
-" GUIÉèÖÃ
-set guioptions-=T "¹Ø±Õ²Ëµ¥À¸
-set guioptions-=m "¹Ø±Õ¹¤¾ßÀ¸
-"set guioptions-=r "¹Ø±ÕÓÒ²à¹ö¶¯Ìõ
-map <silent> <F12> :if &guioptions =~# 'T' <Bar>  
-    \set guioptions-=T <Bar>  
-    \set guioptions-=m <bar>  
-\else <Bar>  
-    \set guioptions+=T <Bar>  
-    \set guioptions+=m <Bar>  
-\endif<CR>  
+" GUIè®¾ç½®
+set guioptions-=T "å…³é—­èœå•æ 
+set guioptions-=m "å…³é—­å·¥å…·æ 
+"set guioptions-=r "å…³é—­å³ä¾§æ»šåŠ¨æ¡
+map <silent> <F12> :if &guioptions =~# 'T' <Bar>
+    \set guioptions-=T <Bar>
+    \set guioptions-=m <bar>
+\else <Bar>
+    \set guioptions+=T <Bar>
+    \set guioptions+=m <Bar>
+\endif<CR>
 
-"¿ªÆô×Ô¶¯Ëõ½ø¶ÔÆë
+"å¼€å¯è‡ªåŠ¨ç¼©è¿›å¯¹é½
 set autoindent
 
-"¹Ø±Õ×Ô¶¯Ëõ½ø(ÔÊĞívimÎª²»Í¬ÀàĞÍµÄÎÄ¼ş¶¨Òå²»Í¬µÄËõ½ø¸ñÊ½)
+"å…³é—­è‡ªåŠ¨ç¼©è¿›(å…è®¸vimä¸ºä¸åŒç±»å‹çš„æ–‡ä»¶å®šä¹‰ä¸åŒçš„ç¼©è¿›æ ¼å¼)
 filetype indent off
 
-"Õë¶Ô²»Í¬µÄÎÄ¼şÀàĞÍ¼ÓÔØ¶ÔÓ¦µÄ²å¼ş
+"é’ˆå¯¹ä¸åŒçš„æ–‡ä»¶ç±»å‹åŠ è½½å¯¹åº”çš„æ’ä»¶
 filetype plugin on
 
-"´°¿ÚÆô¶¯Ê±×Ô¶¯×î´ó»¯
-"au GUIEnter * simalt ~x 
+"çª—å£å¯åŠ¨æ—¶è‡ªåŠ¨æœ€å¤§åŒ–
+"au GUIEnter * simalt ~x
 
-"µ±ÎÄ¼şÔÚÍâ²¿±»ĞŞ¸Ä£¬×Ô¶¯¸üĞÂ¸ÃÎÄ¼ş
+"å½“æ–‡ä»¶åœ¨å¤–éƒ¨è¢«ä¿®æ”¹ï¼Œè‡ªåŠ¨æ›´æ–°è¯¥æ–‡ä»¶
 set autoread
 
-"Ó³Éä¸´ÖÆ¡¢Õ³Ìù¡¢¼ôÌùctrl+c ctrl+v ctrl+x
+"æ˜ å°„å¤åˆ¶ã€ç²˜è´´ã€å‰ªè´´ctrl+c ctrl+v ctrl+x
 map <C-V> "+pa<Esc>
 " map! <C-V> <Esc>"+pa
 map <C-C> "+y
 map <C-X> "+x
-" Ó³ÉäÈ«Ñ¡ ctrl+a
+" æ˜ å°„å…¨é€‰ ctrl+a
 map <C-A> ggVG
 map! <C-A> <Esc>ggVG
-"ctrl+sÎª±£´æ
+"ctrl+sä¸ºä¿å­˜
 map <C-S> :w<CR>
 map! <C-S> <Esc>:w<CR>a
-"ctrl+z³·Ïú
+"ctrl+zæ’¤é”€
 map <C-Z> :u<CR>
 map! <C-Z> <Esc>:u<CR>a
 
-" Óëwindows¹²Ïí¼ôÇĞ°å
+" ä¸windowså…±äº«å‰ªåˆ‡æ¿
 " set clipboard+=unnamed
-     
 
-"ºöÂÔ´óĞ¡Ğ´(ÔÚËÑË÷×Ö·û´®Ê±Ê¹ÓÃ) 
+
+"å¿½ç•¥å¤§å°å†™(åœ¨æœç´¢å­—ç¬¦ä¸²æ—¶ä½¿ç”¨)
 set ignorecase
 
 
-" ÉèÖÃĞĞ¼ä¾à
+" è®¾ç½®è¡Œé—´è·
 " set linespace=2
 
- 
-"ÕÛµş
-" set foldenable  "ÆôÓÃÕÛµş                                  
-" set foldmethod=indent  "indentÉèÖÃÕÛµş,»òÕßÊ¹ÓÃmarkerÕÛµş·½Ê½
-" set foldlevel=3 "ÉèÖÃÕÛµş²ã¼¶
 
-" ³£¹æÄ£Ê½ÏÂÊäÈë cS Çå³ıĞĞÎ²¿Õ¸ñ
+"æŠ˜å 
+" set foldenable  "å¯ç”¨æŠ˜å 
+" set foldmethod=indent  "indentè®¾ç½®æŠ˜å ,æˆ–è€…ä½¿ç”¨markeræŠ˜å æ–¹å¼
+" set foldlevel=3 "è®¾ç½®æŠ˜å å±‚çº§
+
+" å¸¸è§„æ¨¡å¼ä¸‹è¾“å…¥ cS æ¸…é™¤è¡Œå°¾ç©ºæ ¼
 nmap cS :%s/\s\+$//g<cr>:noh<cr>
-	 
-" ³£¹æÄ£Ê½ÏÂÊäÈë cM Çå³ıĞĞÎ² ^M ·ûºÅ
+
+" å¸¸è§„æ¨¡å¼ä¸‹è¾“å…¥ cM æ¸…é™¤è¡Œå°¾ ^M ç¬¦å·
 nmap cM :%s/\r$//g<cr>:noh<cr>
 
 
-"ÉèÖÃ×ÖµäÎÄ¼şµÄÂ·¾¶,ÓÃÓÚOmniComplete
-" set dictionary+=~\tags  "½«tagsÎÄ¼ş×÷Îª×Öµä
+"è®¾ç½®å­—å…¸æ–‡ä»¶çš„è·¯å¾„,ç”¨äºOmniComplete
+" set dictionary+=~\tags  "å°†tagsæ–‡ä»¶ä½œä¸ºå­—å…¸
 autocmd filetype javascript set dictionary=$VIMRUNTIME\dict\js.dict
 autocmd filetype html set dictionary=$VIMRUNTIME\dict\js.dict
-let javascript_enable_domhtmlcss=1     " ´ò¿ªjavascript¶Ôdom¡¢htmlºÍcssµÄÖ§³Ö
+let javascript_enable_domhtmlcss=1     " æ‰“å¼€javascriptå¯¹domã€htmlå’Œcssçš„æ”¯æŒ
 
 
 "  < NerdTree >
 nmap <F2> :NERDTreeToggle<CR>
 
 
-set ft=php " ²é¿´htmlÎÄ¼şÀïµÄjavascript
+set ft=php " æŸ¥çœ‹htmlæ–‡ä»¶é‡Œçš„javascript
 "  < Tagbar >
 nnoremap <silent> <F3> :TagbarToggle<CR>
 let g:tagbar_ctags_bin = 'ctags'
@@ -579,13 +581,13 @@ let g:tagbar_width = 30
 
 
 "  < FuzzyFinder >
- "¼Ó!Îª¾«È·²éÕÒ£¬²»¼ÓÔòÎª´ÖÂÔ²éÕÒ
-map <silent> ,, :FufCoverageFile!<cr> 
-let g:fuf_coveragefile_prompt = '=>' "ÃÀ»¯Fuzzyfinder
-let g:fuf_coveragefile_globPatterns = ['**/*.html','**/*.css','**/*.js','**/*.json','**/*.php']     
+ "åŠ !ä¸ºç²¾ç¡®æŸ¥æ‰¾ï¼Œä¸åŠ åˆ™ä¸ºç²—ç•¥æŸ¥æ‰¾
+map <silent> ,, :FufCoverageFile!<cr>
+let g:fuf_coveragefile_prompt = '=>' "ç¾åŒ–Fuzzyfinder
+let g:fuf_coveragefile_globPatterns = ['**/*.html','**/*.css','**/*.js','**/*.json','**/*.php']
 " let g:fuf_coveragefile_exclude = '\v\~$|\.(o|exe|dll|bak|orig|swp)$|(^|[/\\])\.(hg|git|bzr)($|[/\
-\])|(tmp|log|db/migrate|vendor|**/*.png)' "²»²éÕÒÕâĞ©ÎÄ¼ş
-" let g:fuf_enumeratingLimit = 5000  "²éÕÒ×î´óÊıÎª5000£¬·ñÔò´ò¿ªfuzzyfinder»á±¨´í(Ã²ËÆ²»»á±¨´íÁË)
+\])|(tmp|log|db/migrate|vendor|**/*.png)' "ä¸æŸ¥æ‰¾è¿™äº›æ–‡ä»¶
+" let g:fuf_enumeratingLimit = 5000  "æŸ¥æ‰¾æœ€å¤§æ•°ä¸º5000ï¼Œå¦åˆ™æ‰“å¼€fuzzyfinderä¼šæŠ¥é”™(è²Œä¼¼ä¸ä¼šæŠ¥é”™äº†)
 
 xmap <Leader>s <Plug>Vsurround
 
