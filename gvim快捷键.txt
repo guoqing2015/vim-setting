@@ -181,6 +181,9 @@
 4. ctrl-x  ctrl-o 自动补全
    ctrl-x  ctrl-n
    ctrl-x  ctrl-k 使用字典
+   
+5. ctrl-w 向左删除一个单词
+   ctrl-u 删除光标的当前行位置的左边全部内容 
 
 
 命令模式（Command）
